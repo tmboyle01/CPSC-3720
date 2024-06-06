@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Ticket>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Users </title>
+
+       <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f56600;
+        }
+
+        #accountForm {
+            border-radius: 15px;
+            height: 70%;
+            width: 40%;
+            background-color: #f9f6f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+        }
+
+        #accountForm form{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           width: 75%;
+           height: 75%;
+        }
+
+        #accountForm input{  
+           width: 75%;
+           height: 10%;
+           border-radius: 5px;
+        }
+         #accountForm p{  
+           font-size: 20px;
+           font-weight: bolder;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="ticketForm">
+     <h1>Create Ticket</h1>
+        <form method="post">
+            <label>ID:</label>
+            <br />
+            <input type="number" id="id" name="id" autocomplete="off" required/>
+            <br />
+            <label>Price:</label>
+            <br />
+            <input type="number" id="price" name="price" autocomplete="off" required/>
+            <br />
+            <label>Active status:</label>
+            <br />
+            <input type="checkbox" id="active" name="active" autocomplete="off" required/>
+            <br />
+            <input type="submit" name="Create Ticket" />
+                @if (ViewData["Message"] != null)
+            {
+                <p>@ViewData["Message"]</p>
+            }
+        </form>
+    </div> 
+</body>
+</html>
+
+
+
+
+

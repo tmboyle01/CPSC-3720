@@ -1,0 +1,113 @@
+﻿@model IEnumerable<User>
+     <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Users </title>
+    
+           <style>
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f56600;
+            }
+    
+            #accountForm {
+                border-radius: 15px;
+                height: 70%;
+                width: 40%;
+                background-color: #f9f6f0;
+                display: flex;
+                flex-direction: column;
+                justify-content: right;
+                align-items: center;
+            }
+    
+            #accountForm form{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               width: 75%;
+               height: 75%;
+            }
+    
+            #accountForm input{  
+               width: 75%;
+               height: 10%;
+               border-radius: 5px;
+            }
+             #accountForm p{  
+               font-size: 20px;
+               font-weight: bolder;
+            }
+            #nameInfo{
+            width: 75%;
+            height: 20%;
+            display:flex;
+
+            }
+           .third{
+                height: 100%; 
+                width: 50%;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div id="accountForm">
+         <h1>Create Account</h1>
+            <form method="post">
+                <div id="nameInfo">
+                    <div class="third">
+                    <label>FirstName:</label>
+                    <input style="width: 94%; height: 50%;" type="text" name="FirstName" autocomplete="off" required/>
+                    <br />
+                    </div>
+                    
+                    <div class="third">
+                    <label>LastName:</label>
+                    <input  style="width: 100%; height: 50%;" type="text" name="LastName" autocomplete="off" required/>
+                    <br />
+                    </div>
+                </div>
+                <label>CUID:</label>
+                <br />
+                <input type="text" name="UserName" autocomplete="off" required/>
+                <br />
+                
+        
+                <label>Password:</label>
+                <br />
+                <input type="text" name="Password" autocomplete="off" required/>
+                <br />
+                <input type="submit" name="Store Name" />
+
+                    @if (ViewData["Message"] != null)
+                {
+                    <p>@ViewData["Message"]</p>
+                }
+
+            </form>
+        </div> 
+            <!------
+            <form method="post">
+                <button class="btn btn-primary w-100 py-2" type="button" onclick="location.href='@Url.Action("Index", "App")'">Go back</button>
+            </form>
+               <h1>Users</h1>
+        <ul>
+    
+        </ul>
+            ------>
+            
+    </body>
+    </html>
+    
+    
+    
+    
+    
+    
